@@ -1,0 +1,60 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #d2d6fd;
+  color: #061e75;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 20px 0;
+  color: #061e75;
+  font-size: 2em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.semester {
+  background-color: #82aafa;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.semester h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #061e75;
+}
+
+.subject {
+  background-color: #45d7f7;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.subject.locked {
+  background-color: transparent;
+  border: 2px dashed #aaa;
+  color: #aaa;
+  cursor: default;
+}
+
+.subject.completed {
+  background-color: #84b6f4;
+  text-decoration: line-through;
+  color: #03045e;
+}
+
+.subject:hover:not(.locked):not(.completed) {
+  background-color: #8c97f7;
+}
