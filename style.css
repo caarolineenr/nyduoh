@@ -143,13 +143,17 @@ body.dark #progressFill {
    HEADER TARJETA SUPERIOR
 ========================= */
 .top-card {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     background: #f6e9ee;
-    border-radius: 22px;
-    padding: 20px 28px;
+    padding: 18px 28px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 35px;
+
+    border-bottom: 1px solid #e2b7c7;
 }
 
 /* ===== LADO IZQUIERDO ===== */
