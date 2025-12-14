@@ -135,3 +135,144 @@ body.dark .progress-bar {
 body.dark #progressFill {
     background: #ff9ac2;
 }
+
+/* =========================
+   HEADER TARJETA SUPERIOR
+========================= */
+.top-card {
+    background: #f6e9ee;
+    border-radius: 22px;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+/* ===== LADO IZQUIERDO ===== */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icon-box {
+    width: 48px;
+    height: 48px;
+    background: #e98cae;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.title-box h1 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+
+.title-box p {
+    margin: 2px 0 0 0;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    color: #c25572;
+}
+
+/* ===== BOTÓN MODO OSCURO ===== */
+.dark-container {
+    background: #e0e0e0;
+    padding: 8px;
+    border-radius: 14px;
+}
+
+#toggleDark {
+    background: #e98cae;
+    border: none;
+    border-radius: 12px;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* ===== LADO DERECHO ===== */
+.header-right {
+    text-align: right;
+    min-width: 240px;
+}
+
+.progress-title {
+    font-size: 11px;
+    letter-spacing: 0.8px;
+    color: #c25572;
+    font-weight: 600;
+}
+
+.progress-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #f2cddc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: #e98cae;
+    transition: width 0.4s;
+}
+
+.progress-numbers {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+}
+
+#currentPercent {
+    font-size: 16px;
+    font-weight: 700;
+    color: #e98cae;
+}
+
+.progress-numbers .total {
+    font-size: 11px;
+    color: #999;
+}
+
+/* =========================
+   MODO OSCURO HEADER
+========================= */
+body.dark .top-card {
+    background: #2a2a35;
+}
+
+body.dark .title-box h1 {
+    color: #fff;
+}
+
+body.dark .title-box p,
+body.dark .progress-title {
+    color: #ff9ac2;
+}
+
+body.dark .dark-container {
+    background: #444;
+}
+
+body.dark .progress-bar {
+    background: #444;
+}
+
+body.dark .progress-numbers .total {
+    color: #aaa;
+}
