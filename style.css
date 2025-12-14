@@ -79,3 +79,59 @@ h1 {
 .card:hover:not(.locked) {
     transform: scale(1.03);
 }
+
+/* =========================
+   BOTÓN MODO OSCURO
+========================= */
+#toggleDark {
+    margin: 15px 0;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    background: #e98cae;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* =========================
+   MODO OSCURO
+========================= */
+body.dark {
+    background: #1e1e24;
+    color: #eaeaea;
+}
+
+body.dark header h1 {
+    color: #ff9ac2;
+}
+
+body.dark .sub {
+    color: #ccc;
+}
+
+body.dark .semester h2 {
+    color: #f0f0f0;
+}
+
+body.dark .card {
+    background: #2a2a35;
+    border-color: #444;
+}
+
+body.dark .card.approved {
+    background: #3a2a33;
+    border-color: #ff9ac2;
+}
+
+body.dark .card.locked {
+    opacity: 0.4;
+}
+
+body.dark .progress-bar {
+    background: #333;
+}
+
+body.dark #progressFill {
+    background: #ff9ac2;
+}
