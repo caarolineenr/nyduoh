@@ -1,164 +1,243 @@
-const data = [
-  {
-    semestre: "1° Semestre",
+const malla = [
+
+/* ===========================
+   SEMESTRE 1
+=========================== */
+{
+    semestre: 1,
     ramos: [
-      { nombre: "Introducción a la Profesión del Nutricionista", id: "intro" },
-      { nombre: "Biología y Genética", id: "biogen" },
-      { nombre: "Bases Matemáticas", id: "matematica" },
-      { nombre: "Química General", id: "quimica" },
-      { nombre: "Ciencia de los Alimentos I", id: "ciencia1" },
-      { nombre: "Sociedad y Salud I", id: "sys1" }
+        { id: "mat_gen", nombre: "Matemática General", prereq: [] },
+        { id: "comunicacion", nombre: "Taller de Comunicación Oral y Escrita", prereq: [] },
+        { id: "intro_med", nombre: "Introducción a la Medicina Veterinaria", prereq: [] },
+        { id: "bio_cel", nombre: "Biología Celular", prereq: [] },
+        { id: "quimica", nombre: "Química", prereq: [] }
     ]
-  },
-  {
-    semestre: "2° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 2
+=========================== */
+{
+    semestre: 2,
     ramos: [
-      { nombre: "Anatomía General", id: "anato" },
-      { nombre: "Ética y Bioética", id: "etica" },
-      { nombre: "Inglés 1", id: "ingles1" },
-      { nombre: "Bioquímica General", id: "bioquem", prereq: ["quimica", "biogen"] },
-      { nombre: "Ciencia de los Alimentos II", id: "ciencia2", prereq: ["ciencia1"] },
-      { nombre: "Sociedad y Salud II", id: "sys2", prereq: ["sys1"] }
+        { id: "bioestadistica", nombre: "Bioestadística", prereq: ["mat_gen"] },
+        { id: "ingles1", nombre: "Inglés I", prereq: [] },
+        { id: "anat_canino", nombre: "Anatomía del Canino", prereq: [] },
+        { id: "histoembriologia", nombre: "Histoembriología", prereq: [] },
+        { id: "bioquimica", nombre: "Bioquímica", prereq: ["quimica"] }
     ]
-  },
-  {
-    semestre: "3° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 3
+=========================== */
+{
+    semestre: 3,
     ramos: [
-      { nombre: "Bioquímica Nutricional", id: "bioquemnutri", prereq: ["bioquem"] },
-      { nombre: "Antropometría", id: "antro", prereq: ["anato"] },
-      { nombre: "Psicología General y Evolutiva", id: "psico", prereq: ["etica"] },
-      { nombre: "Agentes Vivos e Higiene de los Alimentos", id: "agentes", prereq: ["biogen"] },
-      { nombre: "Sociedad y Salud III", id: "sys3", prereq: ["sys2"] },
-      { nombre: "Inglés II", id: "ingles2", prereq: ["ingles1"] }
+        { id: "ingles2", nombre: "Inglés II", prereq: ["ingles1"] },
+        { id: "anat_comparada", nombre: "Anatomía Comparada", prereq: ["anat_canino"] },
+        { id: "zoologia", nombre: "Zoología", prereq: ["bio_cel"] },
+        { id: "medio_ambiente", nombre: "Medio Ambiente y Gestión Ambiental", prereq: ["bio_cel"] },
+        { id: "practica_basica", nombre: "Práctica Básica", prereq: ["intro_med", "anat_canino"] }
     ]
-  },
-  {
-    semestre: "4° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 4
+=========================== */
+{
+    semestre: 4,
     ramos: [
-      { nombre: "Fisiología Humana", id: "fisio", prereq: ["bioquem"] },
-      { nombre: "Evaluación del Estado Nutricional", id: "evalu", prereq: ["ciencia2", "antro"] },
-      { nombre: "Técnicas Dietéticas", id: "tecni", prereq: ["ciencia2", "agentes"] },
-      { nombre: "Análisis Químico y Sensorial de los Alimentos", id: "analisis", prereq: ["quimica", "ciencia2"] },
-      { nombre: "Salud Pública", id: "salud", prereq: ["sys3"] },
-      { nombre: "Inglés III", id: "ingles3", prereq: ["ingles2"] }
+        { id: "admin_vet", nombre: "Administración y Emprendimiento Veterinario", prereq: [] },
+        { id: "fisiologia", nombre: "Fisiología Animal", prereq: ["bioquimica", "anat_canino"] },
+        { id: "parasitos", nombre: "Enfermedades Parasitarias", prereq: ["zoologia"] },
+        { id: "micro_general", nombre: "Microbiología General y Veterinaria", prereq: ["bio_cel"] },
+        { id: "genetica", nombre: "Genética", prereq: ["bioestadistica"] }
     ]
-  },
-  {
-    semestre: "5° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 5
+=========================== */
+{
+    semestre: 5,
     ramos: [
-      { nombre: "Farmacología", id: "farmaco", prereq: ["fisio"] },
-      { nombre: "Fisiopatología", id: "fisiopato", prereq: ["fisio"] },
-      { nombre: "Dietética en el Curso de la Vida", id: "diet", prereq: ["bioquemnutri", "sys3", "fisio", "evalu", "tecni"] },
-      { nombre: "Conducta Alimentaria", id: "conducta", prereq: ["psico"] },
-      { nombre: "Planificación Alimentaria", id: "plan", prereq: ["tecni"] },
-      { nombre: "Bioestadística", id: "bioest", prereq: ["matematica"] },
-      { nombre: "Inglés IV", id: "ingles4", prereq: ["ingles3"] }
+        { id: "reproduccion", nombre: "Reproducción e Inseminación Artificial", prereq: ["fisiologia"] },
+        { id: "fisiopatologia", nombre: "Fisiopatología", prereq: ["histoembriologia", "fisiologia"] },
+        { id: "inmunologia", nombre: "Inmunología", prereq: ["micro_general"] },
+        { id: "nutricion", nombre: "Nutrición y Alimentación Animal", prereq: ["bioquimica"] },
+        { id: "tec_alimentos", nombre: "Tecnología de los Alimentos", prereq: ["micro_general"] },
+        { id: "etologia", nombre: "Etología y Bienestar Animal", prereq: ["zoologia"] }
     ]
-  },
-  {
-    semestre: "6° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 6
+=========================== */
+{
+    semestre: 6,
     ramos: [
-      { nombre: "Dietoterapia en Adulto y Persona Mayor", id: "dieto", prereq: ["fisiopato", "diet"] },
-      { nombre: "Educación en Alimentación y Nutrición", id: "educacion", prereq: ["salud", "diet", "conducta"] },
-      { nombre: "Calidad e Inocuidad Alimentaria", id: "calidad", prereq: ["tecni"] },
-      { nombre: "Gestión y Administración en Salud", id: "gestion", prereq: ["salud"] },
-      { nombre: "Investigación en Salud", id: "invest", prereq: ["bioest"] },
-      { nombre: "Formulación y Evaluación de Proyectos", id: "formu", prereq: ["matematica", "diet"] },
-      { nombre: "Inglés V", id: "ingles5", prereq: ["ingles4"] }
+        { id: "ginecologia", nombre: "Ginecología y Obstetricia", prereq: ["reproduccion"] },
+        { id: "control_alimentos", nombre: "Control de Calidad de los Alimentos", prereq: ["parasitos", "tec_alimentos"] },
+        { id: "produccion_avicola", nombre: "Producción Avícola", prereq: ["nutricion", "etologia"] },
+        { id: "farmacologia", nombre: "Farmacología y Toxicología", prereq: ["fisiologia"] },
+        { id: "enf_infecciosas", nombre: "Enfermedades Infecciosas", prereq: ["inmunologia"] },
+        { id: "pat_sistemas", nombre: "Patología de Sistemas", prereq: ["fisiopatologia"] }
     ]
-  },
-  {
-    semestre: "7° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 7
+=========================== */
+{
+    semestre: 7,
     ramos: [
-      { nombre: "Dietoterapia en Pediatría y Adolescencia", id: "dietoped", prereq: ["fisiopato", "diet"] },
-      { nombre: "Nutrición Comunitaria", id: "nutricom", prereq: ["educacion", "gestion"] },
-      { nombre: "Seguridad y Sustentabilidad Agroalimentaria", id: "seguridad", prereq: ["educacion", "calidad"] },
-      { nombre: "Gestión y Administración en Establecimiento Alimentaria", id: "admin", prereq: ["plan", "calidad"] },
-      { nombre: "Seminario de Investigación I", id: "semi1", prereq: ["invest", "formu"] },
-      { nombre: "Inglés VI", id: "ingles6", prereq: ["ingles5"] }
+        { id: "lab_clinico", nombre: "Laboratorio Clínico", prereq: ["pat_sistemas"] },
+        { id: "prod_ovinos", nombre: "Producción Ovinos y Caprinos", prereq: ["genetica"] },
+        { id: "prod_porcinos", nombre: "Producción Porcina", prereq: ["reproduccion", "medio_ambiente"] },
+        { id: "epidemiologia", nombre: "Epidemiología Veterinaria", prereq: ["enf_infecciosas"] },
+        { id: "semiologia", nombre: "Semiología", prereq: ["farmacologia", "fisiopatologia", "anat_comparada"] },
+        { id: "practica_intermedia", nombre: "Práctica Intermedia", prereq: ["farmacologia", "enf_infecciosas"] }
     ]
-  },
-  {
-    semestre: "8° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 8
+=========================== */
+{
+    semestre: 8,
     ramos: [
-      { nombre: "Intervención Clínica", id: "intercl", prereq: ["dieto", "dietoped"] },
-      { nombre: "Intervencion Comunitaria", id: "intercom", prereq: ["nutricom", "seguridad"] },
-      { nombre: "Alimentación Institucional", id: "aliinsti", prereq: ["seguridad", "admin"] },
-      { nombre: "Emprendimiento e Inovación en Alimentación y Nutrición", id: "empren", prereq: ["formu", "seguridad"] },
-      { nombre: "Seminario de Investigación II", id: "semi2", prereq: ["semi1"] }
+        { id: "med_mayores", nombre: "Medicina Animales Mayores", prereq: ["lab_clinico", "semiologia"] },
+        { id: "med_caninos", nombre: "Medicina de Caninos", prereq: ["lab_clinico", "semiologia"] },
+        { id: "med_felinos", nombre: "Medicina de Felinos", prereq: ["lab_clinico", "semiologia"] },
+        { id: "med_exoticos", nombre: "Medicina de Animales Exóticos", prereq: ["lab_clinico", "semiologia"] },
+        { id: "cirugia_general", nombre: "Cirugía General", prereq: ["semiologia"] }
     ]
-  },
-  {
-    semestre: "9°/10° Semestre",
+},
+
+/* ===========================
+   SEMESTRE 9
+=========================== */
+{
+    semestre: 9,
     ramos: [
-      { nombre: "Internado Clínico", id: "internado", prereq: ["intercl", "intercom", "aliinsti", "empren", "semi2", "educacion", "calidad", "gestion", "invest", "formu", "dietoped", "nutricom", "seguridad", "admin", "semi1", "fisio", "evalu", "tecni", "analisis", "salud", "farmaco", "fisiopato", "diet", "conducta", "plan", "bioest", "dieto", "psico", "agentes", "sys3", "sys1", "antro", "bioquemnutri", "sys2", "ciencia2", "bioquem", "ingles1", "ingles2", "ingles3", "ingles4", "ingles5", "ingles6", "anato", "etica", "intro", "biogen", "matematica", "quimica", "ciencia1"] },
-      { nombre: "Internado en Atención Primaria de Salud (APS)", id: "internadoaps", prereq: ["intercl", "intercom", "aliinsti", "empren", "semi2", "educacion", "calidad", "gestion", "invest", "formu", "dietoped", "nutricom", "seguridad", "admin", "semi1", "fisio", "evalu", "tecni", "analisis", "salud", "farmaco", "fisiopato", "diet", "conducta", "plan", "bioest", "dieto", "psico", "agentes", "sys3", "sys1", "antro", "bioquemnutri", "sys2", "ciencia2", "bioquem", "ingles1", "ingles2", "ingles3", "ingles4", "ingles5", "ingles6", "anato", "etica", "intro", "biogen", "matematica", "quimica", "ciencia1"] },
-      { nombre: "Internado en Servicios de Alimentación y Nutrición", id: "internadoserv", prereq: ["intercl", "intercom", "aliinsti", "empren", "semi2", "educacion", "calidad", "gestion", "invest", "formu", "dietoped", "nutricom", "seguridad", "admin", "semi1", "fisio", "evalu", "tecni", "analisis", "salud", "farmaco", "fisiopato", "diet", "conducta", "plan", "bioest", "dieto", "psico", "agentes", "sys3", "sys1", "antro", "bioquemnutri", "sys2", "ciencia2", "bioquem", "ingles1", "ingles2", "ingles3", "ingles4", "ingles5", "ingles6", "anato", "etica", "intro", "biogen", "matematica", "quimica", "ciencia1"] }
+        { id: "formulacion_proyectos", nombre: "Formulación y Evaluación de Proyectos Agropecuarios", prereq: ["admin_vet"] },
+        { id: "pat_quirurgica", nombre: "Patología Quirúrgica", prereq: ["cirugia_general"] },
+        { id: "diagnostico_imagenes", nombre: "Diagnóstico por Imágenes", prereq: ["pat_sistemas"] },
+        { id: "prod_acuicola", nombre: "Producción Acuícola", prereq: ["nutricion"] },
+        { id: "prod_bovinos", nombre: "Producción Bovinos Carne y Leche", prereq: ["ginecologia"] },
+        { id: "metodologia_inv", nombre: "Metodología de la Investigación", prereq: ["epidemiologia"] },
+        { id: "practica_final", nombre: "Práctica Final", prereq: ["practica_intermedia"] }
     ]
-  }
+},
+
+/* ===========================
+   SEMESTRE 10
+=========================== */
+{
+    semestre: 10,
+    ramos: [
+        { id: "farmaco_aplicada", nombre: "Farmacología Aplicada", prereq: ["med_caninos", "med_mayores"] },
+        { id: "salud_publica", nombre: "Salud Pública", prereq: ["control_alimentos", "epidemiologia"] },
+        { id: "titulacion", nombre: "Trabajo de Titulación", prereq: ["metodologia_inv"] },
+        { id: "clinica_mayores", nombre: "Clínica de Animales Mayores", prereq: ["med_mayores", "diagnostico_imagenes"] },
+        { id: "clinica_menores", nombre: "Clínica de Animales Menores", prereq: ["med_caninos", "diagnostico_imagenes"] }
+    ]
+}
+
 ];
 
-const grid = document.querySelector('.grid');
-const state = JSON.parse(localStorage.getItem('aprobadas')) || {};
+/****************************
+ * ESTADO
+ ****************************/
+let aprobados = JSON.parse(localStorage.getItem("aprobados")) || [];
 
-function createGrid() {
-  data.forEach(sem => {
-    const semDiv = document.createElement('div');
-    semDiv.className = 'semester';
-    const title = document.createElement('h2');
-    title.textContent = sem.semestre;
-    semDiv.appendChild(title);
+/****************************
+ * CREAR MALLA
+ ****************************/
+function crearMalla() {
+    const container = document.getElementById("semestersContainer");
+    container.innerHTML = "";
 
-    sem.ramos.forEach(ramo => {
-      const div = document.createElement('div');
-      div.textContent = ramo.nombre;
-      div.className = 'subject';
-      div.dataset.id = ramo.id;
-      if (state[ramo.id]) div.classList.add('completed');
-      else if (ramo.prereq) div.classList.add('locked');
-      semDiv.appendChild(div);
+    malla.forEach(sem => {
+        const semDiv = document.createElement("div");
+        semDiv.classList.add("semester");
+        semDiv.innerHTML = `<h2>Semestre ${sem.semestre}</h2>`;
+
+        const grid = document.createElement("div");
+        grid.classList.add("grid");
+
+        sem.ramos.forEach(ramo => {
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.textContent = ramo.nombre;
+
+            const desbloqueado = ramo.prereq.every(p => aprobados.includes(p));
+
+            if (!desbloqueado) {
+                card.classList.add("locked");
+            }
+
+            if (aprobados.includes(ramo.id)) {
+                card.classList.add("approved");
+            }
+
+            card.addEventListener("click", () => {
+                if (!desbloqueado) return;
+
+                if (aprobados.includes(ramo.id)) {
+                    aprobados = aprobados.filter(id => id !== ramo.id);
+                } else {
+                    aprobados.push(ramo.id);
+                }
+
+                localStorage.setItem("aprobados", JSON.stringify(aprobados));
+                crearMalla();
+            });
+
+            grid.appendChild(card);
+        });
+
+        semDiv.appendChild(grid);
+        container.appendChild(semDiv);
     });
 
-    grid.appendChild(semDiv);
-  });
+    actualizarProgreso();
 }
 
-function updateSubjects() {
-  document.querySelectorAll('.subject').forEach(el => {
-    const id = el.dataset.id;
-    const ramo = findSubjectById(id);
-    if (el.classList.contains('completed')) return;
-    if (!ramo.prereq || ramo.prereq.every(r => state[r])) {
-      el.classList.remove('locked');
-    } else {
-      el.classList.add('locked');
-    }
-  });
+/****************************
+ * PROGRESO %
+ ****************************/
+function actualizarProgreso() {
+    const totalRamos = malla.reduce((s, sem) => s + sem.ramos.length, 0);
+    const porcentaje = Math.round((aprobados.length / totalRamos) * 100);
+
+    document.getElementById("progressText").textContent =
+        `Progreso: ${porcentaje}%`;
+
+    document.getElementById("progressFill").style.width =
+        porcentaje + "%";
 }
 
-function findSubjectById(id) {
-  for (let sem of data) {
-    for (let ramo of sem.ramos) {
-      if (ramo.id === id) return ramo;
-    }
-  }
-  return null;
+/****************************
+ * MODO OSCURO
+ ****************************/
+const toggleDark = document.getElementById("toggleDark");
+
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+    toggleDark.textContent = "☀️ Modo claro";
 }
 
-grid.addEventListener('click', e => {
-  if (e.target.classList.contains('subject') && !e.target.classList.contains('locked')) {
-    const id = e.target.dataset.id;
-    if (state[id]) {
-      delete state[id];
-      e.target.classList.remove('completed');
-    } else {
-      state[id] = true;
-      e.target.classList.add('completed');
-    }
-    localStorage.setItem('aprobadas', JSON.stringify(state));
-    updateSubjects();
-  }
+toggleDark.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    const activo = document.body.classList.contains("dark");
+
+    localStorage.setItem("darkMode", activo);
+    toggleDark.textContent = activo ? "☀️ Modo claro" : "🌙 Modo oscuro";
 });
 
-createGrid();
-updateSubjects();
+/****************************
+ * INICIAR
+ ****************************/
+crearMalla();
