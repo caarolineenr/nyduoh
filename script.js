@@ -212,11 +212,8 @@ function actualizarProgreso() {
     const totalRamos = malla.reduce((s, sem) => s + sem.ramos.length, 0);
     const porcentaje = Math.round((aprobados.length / totalRamos) * 100);
 
-    document.getElementById("progressText").textContent =
-        `Progreso: ${porcentaje}%`;
-
-    document.getElementById("progressFill").style.width =
-        porcentaje + "%";
+    document.getElementById("progressFill").style.width = porcentaje + "%";
+    document.getElementById("currentPercent").textContent = porcentaje + "%";
 }
 
 /****************************
