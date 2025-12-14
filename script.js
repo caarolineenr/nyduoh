@@ -226,7 +226,7 @@ const toggleDark = document.getElementById("toggleDark");
 
 if (localStorage.getItem("darkMode") === "true") {
     document.body.classList.add("dark");
-    toggleDark.textContent = "☀️ Modo claro";
+    toggleDark.textContent = "Modo claro";
 }
 
 toggleDark.addEventListener("click", () => {
@@ -234,7 +234,7 @@ toggleDark.addEventListener("click", () => {
     const activo = document.body.classList.contains("dark");
 
     localStorage.setItem("darkMode", activo);
-    toggleDark.textContent = activo ? "☀️ Modo claro" : "🌙 Modo oscuro";
+    toggleDark.textContent = activo ? "Modo claro" : "Modo oscuro";
 });
 
 /****************************
