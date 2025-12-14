@@ -283,3 +283,24 @@ body.dark .progress-bar {
 body.dark .progress-numbers .total {
     color: #aaa;
 }
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 42px;
+    height: 42px;
+    background: #e04b75;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-box img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+}
