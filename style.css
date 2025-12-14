@@ -1,8 +1,11 @@
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background: #f8f5f7;
     margin: 0;
-    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "San Francisco", "SF Pro Text",
+                 "SF Pro Display",
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #ffffff;
+    color: #111;
 }
 
 header {
