@@ -224,18 +224,22 @@ function actualizarProgreso() {
  ****************************/
 const toggleDark = document.getElementById("toggleDark");
 
-if (localStorage.getItem("darkMode") === "true") {
-    document.body.classList.add("dark");
-    toggleDark.textContent = "Modo claro";
+if (toggleDark) {
+
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark");
+        toggleDark.textContent = "Modo claro";
+    }
+
+    toggleDark.addEventListener("click", () => {
+        document.body.classList.toggle("dark");
+        const activo = document.body.classList.contains("dark");
+
+        localStorage.setItem("darkMode", activo);
+        toggleDark.textContent = activo ? "Modo claro" : "Modo oscuro";
+    });
+
 }
-
-toggleDark.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    const activo = document.body.classList.contains("dark");
-
-    localStorage.setItem("darkMode", activo);
-    toggleDark.textContent = activo ? "Modo claro" : "Modo oscuro";
-});
 
 /****************************
  * INICIAR
