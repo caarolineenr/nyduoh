@@ -7,18 +7,39 @@
 </head>
 <body>
 
-<header>
-    <h1>Medicina Veterinaria</h1>
-    <p class="sub">Malla Curricular Interactiva • UDLA</p>
+<header class="top-card">
 
-    <button id="toggleDark">Modo oscuro</button>
+    <!-- LADO IZQUIERDO -->
+    <div class="header-left">
+        <div class="icon-box">🎓</div>
 
-    <div class="progress-container">
-        <span id="progressText">Progreso: 0%</span>
-        <div class="progress-bar">
-            <div id="progressFill"></div>
+        <div class="title-box">
+            <h1>MEDICINA VETERINARIA</h1>
+            <p>MALLA CURRICULAR INTERACTIVA • UDLA</p>
         </div>
     </div>
+
+    <!-- BOTÓN MODO OSCURO -->
+    <div class="dark-container">
+        <button id="toggleDark">🌙</button>
+    </div>
+
+    <!-- LADO DERECHO -->
+    <div class="header-right">
+        <span class="progress-title">PROGRESO DE CARRERA</span>
+
+        <div class="progress-row">
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
+            <div class="progress-numbers">
+                <span id="currentPercent">0%</span>
+                <span class="total">/ 100%</span>
+            </div>
+        </div>
+    </div>
+
 </header>
 
 <main id="semestersContainer"></main>
