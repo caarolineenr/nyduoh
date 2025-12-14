@@ -14,7 +14,7 @@ body {
 ========================= */
 .top-card {
     background: #ffffff;
-    border-radius: 22px;
+    border-radius: 10px;
     padding: 20px 28px;
     display: flex;
     align-items: center;
