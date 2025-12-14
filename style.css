@@ -211,6 +211,23 @@ body.dark .card.approved {
 ========================= */
 #semestersContainer {
     display: flex;
-    flex-direction: column;
     gap: 40px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+/* scrollbar bonita (opcional) */
+#semestersContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+#semestersContainer::-webkit-scrollbar-track {
+    background: #f2cddc;
+    border-radius: 10px;
+}
+
+#semestersContainer::-webkit-scrollbar-thumb {
+    background: #e98cae;
+    border-radius: 10px;
 }
