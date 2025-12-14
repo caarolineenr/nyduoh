@@ -1,5 +1,5 @@
 /* =========================
-   ESTILO GENERAL
+   GENERAL
 ========================= */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -9,7 +9,7 @@ body {
 }
 
 /* =========================
-   HEADER TARJETA
+   HEADER
 ========================= */
 .top-card {
     background: #f6e9ee;
@@ -18,7 +18,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 /* IZQUIERDA */
@@ -42,7 +42,6 @@ body {
 .title-box h1 {
     margin: 0;
     font-size: 18px;
-    font-weight: 700;
     color: #000;
 }
 
@@ -53,7 +52,7 @@ body {
     color: #c25572;
 }
 
-/* BOTÓN MODO OSCURO */
+/* BOTÓN */
 .dark-container {
     background: #e0e0e0;
     padding: 8px;
@@ -72,14 +71,13 @@ body {
 /* DERECHA */
 .header-right {
     text-align: right;
-    min-width: 240px;
+    min-width: 260px;
 }
 
 .progress-title {
     font-size: 11px;
     letter-spacing: 0.8px;
     color: #c25572;
-    font-weight: 600;
 }
 
 .progress-row {
@@ -107,7 +105,7 @@ body {
 .progress-numbers {
     display: flex;
     align-items: baseline;
-    gap: 3px;
+    gap: 4px;
 }
 
 #currentPercent {
@@ -116,28 +114,49 @@ body {
     color: #e98cae;
 }
 
-.progress-numbers .total {
+.total {
     font-size: 11px;
     color: #999;
 }
 
 /* =========================
-   MALLA
+   MALLA HORIZONTAL
 ========================= */
-.semester {
+#semestersContainer {
     display: flex;
-    flex-direction: colum;
+    gap: 40px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    scroll-behavior: smooth;
+}
+
+#semestersContainer::-webkit-scrollbar {
+    height: 8px;
+}
+
+#semestersContainer::-webkit-scrollbar-thumb {
+    background: #e98cae;
+    border-radius: 10px;
+}
+
+.semester {
+    min-width: 260px;
+    flex-shrink: 0;
 }
 
 .semester h2 {
-    margin-bottom: 10px;
-    color: #444;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+    color: #555;
 }
 
+/* RAMOS */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .card {
@@ -150,7 +169,7 @@ body {
 }
 
 .card.locked {
-    opacity: 0.5;
+    opacity: 0.45;
     cursor: not-allowed;
 }
 
@@ -192,10 +211,6 @@ body.dark .progress-bar {
     background: #444;
 }
 
-body.dark .progress-numbers .total {
-    color: #aaa;
-}
-
 body.dark .card {
     background: #2a2a35;
     border-color: #444;
@@ -204,30 +219,4 @@ body.dark .card {
 body.dark .card.approved {
     background: #3a2a33;
     border-color: #ff9ac2;
-}
-
-/* =========================
-   SEMESTRES EN VERTICAL
-========================= */
-#semestersContainer {
-    display: flex;
-    gap: 40px;
-    overflow-x: auto;
-    padding-bottom: 20px;
-    scroll-behavior: smooth;
-}
-
-/* scrollbar bonita (opcional) */
-#semestersContainer::-webkit-scrollbar {
-    height: 8px;
-}
-
-#semestersContainer::-webkit-scrollbar-track {
-    background: #f2cddc;
-    border-radius: 10px;
-}
-
-#semestersContainer::-webkit-scrollbar-thumb {
-    background: #e98cae;
-    border-radius: 10px;
 }
