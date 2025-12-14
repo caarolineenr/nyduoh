@@ -125,7 +125,8 @@ body {
    MALLA
 ========================= */
 .semester {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: colum;
 }
 
 .semester h2 {
@@ -203,4 +204,13 @@ body.dark .card {
 body.dark .card.approved {
     background: #3a2a33;
     border-color: #ff9ac2;
+}
+
+/* =========================
+   SEMESTRES EN VERTICAL
+========================= */
+#semestersContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
