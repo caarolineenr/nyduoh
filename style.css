@@ -77,6 +77,10 @@ body {
     transition: 0.25s;
 }
 
+body.dark .dark-btn {
+    color: #fff;
+}
+
 #toggleDark {
     background: #e98cae;
     border: none;
