@@ -6,11 +6,11 @@ const malla = [
 {
     semestre: 1,
     ramos: [
-        { id: "mat_gen", nombre: "Matemática General", prereq: [] },
-        { id: "comunicacion", nombre: "Taller de Comunicación Oral y Escrita", prereq: [] },
-        { id: "intro_med", nombre: "Introducción a la Medicina Veterinaria", prereq: [] },
-        { id: "bio_cel", nombre: "Biología Celular", prereq: [] },
-        { id: "quimica", nombre: "Química", prereq: [] }
+        { id: "mat_gen", nombre: "MATEMÁTICA GENERAL", prereq: [] },
+        { id: "comunicacion", nombre: "TALLER DE COMUNICACIÓN ORAL Y ESCRITA", prereq: [] },
+        { id: "intro_med", nombre: "INTRODUCCIÓN A LA MEDICINA VETERINARIA", prereq: [] },
+        { id: "bio_cel", nombre: "BIOLOGÍA CELULAR", prereq: [] },
+        { id: "quimica", nombre: "QUÍMICA", prereq: [] }
     ]
 },
 
