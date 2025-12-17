@@ -20,11 +20,11 @@ const malla = [
 {
     semestre: 2,
     ramos: [
-        { id: "bioestadistica", nombre: "Bioestadística", prereq: ["mat_gen"] },
-        { id: "ingles1", nombre: "Inglés I", prereq: [] },
-        { id: "anat_canino", nombre: "Anatomía del Canino", prereq: [] },
-        { id: "histoembriologia", nombre: "Histoembriología", prereq: [] },
-        { id: "bioquimica", nombre: "Bioquímica", prereq: ["quimica"] }
+        { id: "bioestadistica", nombre: "BIOESTADÍSTICA ", prereq: ["mat_gen"] },
+        { id: "ingles1", nombre: "INGLÉS I", prereq: [] },
+        { id: "anat_canino", nombre: "ANATOMÍADELCANINO", prereq: [] },
+        { id: "histoembriologia", nombre: "HISTOEMBRIOLOGÍA", prereq: [] },
+        { id: "bioquimica", nombre: "BIOQUÍMICA", prereq: ["quimica"] }
     ]
 },
 
@@ -34,11 +34,11 @@ const malla = [
 {
     semestre: 3,
     ramos: [
-        { id: "ingles2", nombre: "Inglés II", prereq: ["ingles1"] },
-        { id: "anat_comparada", nombre: "Anatomía Comparada", prereq: ["anat_canino"] },
-        { id: "zoologia", nombre: "Zoología", prereq: ["bio_cel"] },
-        { id: "medio_ambiente", nombre: "Medio Ambiente y Gestión Ambiental", prereq: ["bio_cel"] },
-        { id: "practica_basica", nombre: "Práctica Básica", prereq: ["intro_med", "anat_canino"] }
+        { id: "ingles2", nombre: "INGLÉS II", prereq: ["ingles1"] },
+        { id: "anat_comparada", nombre: "ANATOMÍA COMPARADA", prereq: ["anat_canino"] },
+        { id: "zoologia", nombre: "ZOOLOGÍA", prereq: ["bio_cel"] },
+        { id: "medio_ambiente", nombre: "MEDIO AMBIENTE Y GESTIÓN AMBIENTAL", prereq: ["bio_cel"] },
+        { id: "practica_basica", nombre: "PRÁCTICA BÁSICA", prereq: ["intro_med", "anat_canino"] }
     ]
 },
 
@@ -48,11 +48,11 @@ const malla = [
 {
     semestre: 4,
     ramos: [
-        { id: "admin_vet", nombre: "Administración y Emprendimiento Veterinario", prereq: [] },
-        { id: "fisiologia", nombre: "Fisiología Animal", prereq: ["bioquimica", "anat_canino"] },
-        { id: "parasitos", nombre: "Enfermedades Parasitarias", prereq: ["zoologia"] },
-        { id: "micro_general", nombre: "Microbiología General y Veterinaria", prereq: ["bio_cel"] },
-        { id: "genetica", nombre: "Genética", prereq: ["bioestadistica"] }
+        { id: "admin_vet", nombre: "ADMINISTRACIÓN Y EMPRENDIMIENTO VETERINARIO", prereq: [] },
+        { id: "fisiologia", nombre: "FISIOLOGÍA ANIMAL", prereq: ["bioquimica", "anat_canino"] },
+        { id: "parasitos", nombre: "ENFERMEDADES PARASITARIAS", prereq: ["zoologia"] },
+        { id: "micro_general", nombre: "MICROBIOLOGÍA GENERAL Y VETERINARIA", prereq: ["bio_cel"] },
+        { id: "genetica", nombre: "GENÉTICA", prereq: ["bioestadistica"] }
     ]
 },
 
@@ -62,12 +62,12 @@ const malla = [
 {
     semestre: 5,
     ramos: [
-        { id: "reproduccion", nombre: "Reproducción e Inseminación Artificial", prereq: ["fisiologia"] },
-        { id: "fisiopatologia", nombre: "Fisiopatología", prereq: ["histoembriologia", "fisiologia"] },
-        { id: "inmunologia", nombre: "Inmunología", prereq: ["micro_general"] },
-        { id: "nutricion", nombre: "Nutrición y Alimentación Animal", prereq: ["bioquimica"] },
-        { id: "tec_alimentos", nombre: "Tecnología de los Alimentos", prereq: ["micro_general"] },
-        { id: "etologia", nombre: "Etología y Bienestar Animal", prereq: ["zoologia"] }
+        { id: "reproduccion", nombre: "REPRODUCCIÓN E INSEMINACIÓN ARTIFICIAL", prereq: ["fisiologia"] },
+        { id: "fisiopatologia", nombre: "FISIOPATOLOGÍA", prereq: ["histoembriologia", "fisiologia"] },
+        { id: "inmunologia", nombre: "INMUNOLOGÍA", prereq: ["micro_general"] },
+        { id: "nutricion", nombre: "NUTRICIÓN Y ALIMENTACIÓN ANIMAL", prereq: ["bioquimica"] },
+        { id: "tec_alimentos", nombre: "TECNOLOGÍA DE LOS ALIMENTOS", prereq: ["micro_general"] },
+        { id: "etologia", nombre: "ETOLOGÍA Y BIENESTAR ANIMAL", prereq: ["zoologia"] }
     ]
 },
 
@@ -77,12 +77,12 @@ const malla = [
 {
     semestre: 6,
     ramos: [
-        { id: "ginecologia", nombre: "Ginecología y Obstetricia", prereq: ["reproduccion"] },
-        { id: "control_alimentos", nombre: "Control de Calidad de los Alimentos", prereq: ["parasitos", "tec_alimentos"] },
-        { id: "produccion_avicola", nombre: "Producción Avícola", prereq: ["nutricion", "etologia"] },
-        { id: "farmacologia", nombre: "Farmacología y Toxicología", prereq: ["fisiologia"] },
-        { id: "enf_infecciosas", nombre: "Enfermedades Infecciosas", prereq: ["inmunologia"] },
-        { id: "pat_sistemas", nombre: "Patología de Sistemas", prereq: ["fisiopatologia"] }
+        { id: "ginecologia", nombre: "GINECOLOGÍA Y OBSTETRICIA", prereq: ["reproduccion"] },
+        { id: "control_alimentos", nombre: "CONTROL DE CALIDAD DE LOS ALIMENTOS", prereq: ["parasitos", "tec_alimentos"] },
+        { id: "produccion_avicola", nombre: "PRODUCCIÓN AVÍCOLA", prereq: ["nutricion", "etologia"] },
+        { id: "farmacologia", nombre: "FARMACOLOGÍA Y TOXICOLOGÍA", prereq: ["fisiologia"] },
+        { id: "enf_infecciosas", nombre: "ENFERMEDADES INFECCIOSAS", prereq: ["inmunologia"] },
+        { id: "pat_sistemas", nombre: "PATOLOGÍA DE SISTEMAS", prereq: ["fisiopatologia"] }
     ]
 },
 
@@ -92,12 +92,12 @@ const malla = [
 {
     semestre: 7,
     ramos: [
-        { id: "lab_clinico", nombre: "Laboratorio Clínico", prereq: ["pat_sistemas"] },
-        { id: "prod_ovinos", nombre: "Producción Ovinos y Caprinos", prereq: ["genetica"] },
-        { id: "prod_porcinos", nombre: "Producción Porcina", prereq: ["reproduccion", "medio_ambiente"] },
-        { id: "epidemiologia", nombre: "Epidemiología Veterinaria", prereq: ["enf_infecciosas"] },
-        { id: "semiologia", nombre: "Semiología", prereq: ["farmacologia", "fisiopatologia", "anat_comparada"] },
-        { id: "practica_intermedia", nombre: "Práctica Intermedia", prereq: ["farmacologia", "enf_infecciosas"] }
+        { id: "lab_clinico", nombre: "LABORATORIO CLÍNICO", prereq: ["pat_sistemas"] },
+        { id: "prod_ovinos", nombre: "PRODUCCIÓN OVINOS Y CAPRINOS", prereq: ["genetica"] },
+        { id: "prod_porcinos", nombre: "PRODUCCIÓN PORCINA", prereq: ["reproduccion", "medio_ambiente"] },
+        { id: "epidemiologia", nombre: "EPIDEMIOLOGÍA VETERINARIA", prereq: ["enf_infecciosas"] },
+        { id: "semiologia", nombre: "SEMIOLOGÍA", prereq: ["farmacologia", "fisiopatologia", "anat_comparada"] },
+        { id: "practica_intermedia", nombre: "PRÁCTICA INTERMEDIA", prereq: ["farmacologia", "enf_infecciosas"] }
     ]
 },
 
@@ -107,11 +107,11 @@ const malla = [
 {
     semestre: 8,
     ramos: [
-        { id: "med_mayores", nombre: "Medicina Animales Mayores", prereq: ["lab_clinico", "semiologia"] },
-        { id: "med_caninos", nombre: "Medicina de Caninos", prereq: ["lab_clinico", "semiologia"] },
-        { id: "med_felinos", nombre: "Medicina de Felinos", prereq: ["lab_clinico", "semiologia"] },
-        { id: "med_exoticos", nombre: "Medicina de Animales Exóticos", prereq: ["lab_clinico", "semiologia"] },
-        { id: "cirugia_general", nombre: "Cirugía General", prereq: ["semiologia"] }
+        { id: "med_mayores", nombre: "MEDICINA DE ANIMALES MAYORES", prereq: ["lab_clinico", "semiologia"] },
+        { id: "med_caninos", nombre: "MEDICINA DE CANINOS", prereq: ["lab_clinico", "semiologia"] },
+        { id: "med_felinos", nombre: "MEDICINA DE FELINOS", prereq: ["lab_clinico", "semiologia"] },
+        { id: "med_exoticos", nombre: "MEDICINA DE ANIMALES EXÓTICOS", prereq: ["lab_clinico", "semiologia"] },
+        { id: "cirugia_general", nombre: "CIRUGÍA GENERAL", prereq: ["semiologia"] }
     ]
 },
 
@@ -121,13 +121,13 @@ const malla = [
 {
     semestre: 9,
     ramos: [
-        { id: "formulacion_proyectos", nombre: "Formulación y Evaluación de Proyectos Agropecuarios", prereq: ["admin_vet"] },
-        { id: "pat_quirurgica", nombre: "Patología Quirúrgica", prereq: ["cirugia_general"] },
-        { id: "diagnostico_imagenes", nombre: "Diagnóstico por Imágenes", prereq: ["pat_sistemas"] },
-        { id: "prod_acuicola", nombre: "Producción Acuícola", prereq: ["nutricion"] },
-        { id: "prod_bovinos", nombre: "Producción Bovinos Carne y Leche", prereq: ["ginecologia"] },
-        { id: "metodologia_inv", nombre: "Metodología de la Investigación", prereq: ["epidemiologia"] },
-        { id: "practica_final", nombre: "Práctica Final", prereq: ["practica_intermedia"] }
+        { id: "formulacion_proyectos", nombre: "FORMULACIÓN Y EVALUACIÓN DE PROYECTOS AGROPECUARIOS", prereq: ["admin_vet"] },
+        { id: "pat_quirurgica", nombre: "PATOLOGÍA QUIRÚRGICA", prereq: ["cirugia_general"] },
+        { id: "diagnostico_imagenes", nombre: "DIAGNÓSTICO POR IMÁGENES", prereq: ["pat_sistemas"] },
+        { id: "prod_acuicola", nombre: "PRODUCCIÓN ACUÍCOLA", prereq: ["nutricion"] },
+        { id: "prod_bovinos", nombre: "PRODUCCIÓN BOVINOS CARNE Y LECHE", prereq: ["ginecologia"] },
+        { id: "metodologia_inv", nombre: "METODOLOGÍA DE LA INVESTIGACIÓN", prereq: ["epidemiologia"] },
+        { id: "practica_final", nombre: "PRÁCTICA FINAL", prereq: ["practica_intermedia"] }
     ]
 },
 
@@ -137,11 +137,11 @@ const malla = [
 {
     semestre: 10,
     ramos: [
-        { id: "farmaco_aplicada", nombre: "Farmacología Aplicada", prereq: ["med_caninos", "med_mayores"] },
-        { id: "salud_publica", nombre: "Salud Pública", prereq: ["control_alimentos", "epidemiologia"] },
-        { id: "titulacion", nombre: "Trabajo de Titulación", prereq: ["metodologia_inv"] },
-        { id: "clinica_mayores", nombre: "Clínica de Animales Mayores", prereq: ["med_mayores", "diagnostico_imagenes"] },
-        { id: "clinica_menores", nombre: "Clínica de Animales Menores", prereq: ["med_caninos", "diagnostico_imagenes"] }
+        { id: "farmaco_aplicada", nombre: "FARMACOLOGÍA APLICADA", prereq: ["med_caninos", "med_mayores"] },
+        { id: "salud_publica", nombre: "SALUD PÚBLICA", prereq: ["control_alimentos", "epidemiologia"] },
+        { id: "titulacion", nombre: "TRABAJO DE TITULACIÓN", prereq: ["metodologia_inv"] },
+        { id: "clinica_mayores", nombre: "CLÍNICA DE ANIMALES MAYORES", prereq: ["med_mayores", "diagnostico_imagenes"] },
+        { id: "clinica_menores", nombre: "CLÍNICA DE ANIMALES MENORES", prereq: ["med_caninos", "diagnostico_imagenes"] }
     ]
 }
 
