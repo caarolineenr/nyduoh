@@ -184,7 +184,7 @@ body.dark .dark-btn {
 .card {
     background: #fff;
     border: 2px solid #f0d8e1;
-    border-radius: 6px;
+    border-radius: 15px;
     padding: 12px;
     cursor: pointer;
     transition: 0.25s;
