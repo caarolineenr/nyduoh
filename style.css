@@ -184,8 +184,19 @@ body.dark .dark-btn {
 .card {
     background: #fff;
     border: 2px solid #f0d8e1;
-    border-radius: 15px;
-    padding: 12px;
+    border-radius: 6px;
+
+    width: 200px;
+    min-height: 90px;
+
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    line-height: 1.2;
+
     cursor: pointer;
     transition: 0.25s;
 }
