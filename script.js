@@ -22,7 +22,7 @@ const malla = [
     ramos: [
         { id: "bioestadistica", nombre: "BIOESTADÍSTICA ", prereq: ["mat_gen"] },
         { id: "ingles1", nombre: "INGLÉS I", prereq: [] },
-        { id: "anat_canino", nombre: "ANATOMÍADELCANINO", prereq: [] },
+        { id: "anat_canino", nombre: "ANATOMÍA DEL CANINO", prereq: [] },
         { id: "histoembriologia", nombre: "HISTOEMBRIOLOGÍA", prereq: [] },
         { id: "bioquimica", nombre: "BIOQUÍMICA", prereq: ["quimica"] }
     ]
