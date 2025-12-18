@@ -242,3 +242,10 @@ if (toggleDark) {
  * INICIAR
  ****************************/
 crearMalla();
+
+semDiv.innerHTML = `
+    <h2 class="semester-title">
+        <span class="sem-text">SEMESTRE</span>
+        <span class="sem-number">${sem.semestre}</span>
+    </h2>
+`;
