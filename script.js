@@ -1,3 +1,4 @@
+console.log("SCRIPT NUEVO CARGADO");
 const malla = [
 
 /* ===========================
