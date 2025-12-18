@@ -267,3 +267,27 @@ body.dark .card.approved {
     background: rgba(233, 140, 174, 0.18);
     border-color: #e98cae;
 }
+
+/* =========================
+   TITULO SEMESTRE
+========================= */
+.semester-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.sem-text {
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #555;
+    font-weight: 600;
+}
+
+.sem-number {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e98cae;
+    line-height: 1;
+}
