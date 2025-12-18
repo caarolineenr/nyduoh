@@ -216,14 +216,13 @@ body.dark .dark-btn {
 }
 
 /* =========================
-   MODO OSCURO (AZUL)
+   MODO OSCURO ROSADO (RESET)
 ========================= */
 body.dark {
     background: #1e1e24;
     color: #eaeaea;
 }
 
-/* HEADER */
 body.dark .top-card {
     background: #2a2a35;
 }
@@ -234,34 +233,30 @@ body.dark .title-box h1 {
 
 body.dark .title-box p,
 body.dark .progress-title {
-    color: #2c2cd1; /* AZUL */
+    color: #e98cae;
 }
 
-/* BOTÓN */
 body.dark .dark-btn {
-    background: #2c2cd1;
+    background: #e98cae;
     color: #fff;
 }
 
-/* PROGRESO */
 body.dark .progress-bar {
     background: #444;
 }
 
 body.dark #progressFill {
-    background: #2c2cd1;
+    background: #e98cae;
 }
 
 body.dark #currentPercent {
-    color: #2c2cd1;
+    color: #e98cae;
 }
 
-/* SEMESTRES */
 body.dark .semester h2 {
     color: #ccc;
 }
 
-/* RAMOS */
 body.dark .card {
     background: #2a2a35;
     border-color: #444;
@@ -269,15 +264,6 @@ body.dark .card {
 }
 
 body.dark .card.approved {
-    background: rgba(44, 44, 209, 0.15); /* azul suave */
-    border-color: #2c2cd1;
-}
-
-body.dark .card.locked {
-    opacity: 0.4;
-}
-
-/* SCROLLBAR */
-body.dark #semestersContainer::-webkit-scrollbar-thumb {
-    background: #2c2cd1;
+    background: rgba(233, 140, 174, 0.18);
+    border-color: #e98cae;
 }
