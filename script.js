@@ -163,7 +163,12 @@ function crearMalla() {
     malla.forEach(sem => {
         const semDiv = document.createElement("div");
         semDiv.classList.add("semester");
-        semDiv.innerHTML = `<h2>Semestre ${sem.semestre}</h2>`;
+        semDiv.innerHTML = `
+    <h2 class="semester-title">
+        <span class="sem-text">SEMESTRE</span>
+        <span class="sem-number">${sem.semestre}</span>
+    </h2>
+`;
 
         const grid = document.createElement("div");
         grid.classList.add("grid");
@@ -243,10 +248,3 @@ if (toggleDark) {
  * INICIAR
  ****************************/
 crearMalla();
-
-semDiv.innerHTML = `
-    <h2 class="semester-title">
-        <span class="sem-text">SEMESTRE</span>
-        <span class="sem-number">${sem.semestre}</span>
-    </h2>
-`;
