@@ -291,3 +291,9 @@ body.dark .card.approved {
     color: #e98cae;
     line-height: 1;
 }
+
+.semester {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
