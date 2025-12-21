@@ -223,26 +223,33 @@ function actualizarProgreso() {
 }
 
 /****************************
- * MODO OSCURO
+ * PALETA DE COLORES 🎨
  ****************************/
-const toggleDark = document.getElementById("toggleDark");
+const paletteBtn = document.getElementById("paletteBtn");
+const palette = document.getElementById("palette");
+const dots = document.querySelectorAll(".color-dot");
 
-if (toggleDark) {
+// tema guardado
+const savedTheme = localStorage.getItem("theme") || "pink";
+document.body.classList.add("theme-" + savedTheme);
 
-    if (localStorage.getItem("darkMode") === "true") {
-        document.body.classList.add("dark");
-        toggleDark.textContent = "Modo claro";
-    }
+// abrir / cerrar paleta
+paletteBtn.addEventListener("click", () => {
+    palette.classList.toggle("hidden");
+});
 
-    toggleDark.addEventListener("click", () => {
-        document.body.classList.toggle("dark");
-        const activo = document.body.classList.contains("dark");
+// cambiar color
+dots.forEach(dot => {
+    dot.addEventListener("click", () => {
+        const theme = dot.dataset.theme;
 
-        localStorage.setItem("darkMode", activo);
-        toggleDark.textContent = activo ? "Modo claro" : "Modo oscuro";
+        document.body.classList.remove("theme-pink", "theme-blue", "theme-purple");
+        document.body.classList.add("theme-" + theme);
+
+        localStorage.setItem("theme", theme);
+        palette.classList.add("hidden");
     });
-
-}
+});
 
 /****************************
  * INICIAR
