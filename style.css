@@ -211,59 +211,6 @@ body {
 }
 
 /* =========================
-   MODO OSCURO ROSADO (RESET)
-========================= */
-body.dark {
-    background: #1e1e24;
-    color: #eaeaea;
-}
-
-body.dark .top-card {
-    background: #2a2a35;
-}
-
-body.dark .title-box h1 {
-    color: #fff;
-}
-
-body.dark .title-box p,
-body.dark .progress-title {
-    color: #e98cae;
-}
-
-body.dark .dark-btn {
-    background: #e98cae;
-    color: #fff;
-}
-
-body.dark .progress-bar {
-    background: #444;
-}
-
-body.dark #progressFill {
-    background: #e98cae;
-}
-
-body.dark #currentPercent {
-    color: #e98cae;
-}
-
-body.dark .semester h2 {
-    color: #ccc;
-}
-
-body.dark .card {
-    background: #2a2a35;
-    border-color: #444;
-    color: #eaeaea;
-}
-
-body.dark .card.approved {
-    background: rgba(233, 140, 174, 0.18);
-    border-color: #e98cae;
-}
-
-/* =========================
    TITULO SEMESTRE
 ========================= */
 .semester-title {
