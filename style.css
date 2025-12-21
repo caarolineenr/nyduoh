@@ -53,43 +53,6 @@ body {
     color: #c25572;
 }
 
-/* BOTÓN */
-.dark-container {
-    background: #e0e0e0;
-    padding: 8px;
-    border-radius: 14px;
-}
-
-.dark-btn {
-    background: #e98cae;
-    border: none;
-    border-radius: 14px;
-    padding: 10px 16px;
-    font-size: 13px;
-    font-weight: 600;
-
-    color: #fff;
-    text-decoration: none;
-    appearance: none;
-    -webkit-appearance: none;
-
-    cursor: pointer;
-    transition: 0.25s;
-}
-
-body.dark .dark-btn {
-    color: #fff;
-}
-
-#toggleDark {
-    background: #e98cae;
-    border: none;
-    border-radius: 12px;
-    padding: 8px 12px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 /* DERECHA */
 .header-right {
     text-align: right;
@@ -302,3 +265,58 @@ body.dark .card.approved {
     text-align: center;
     margin-bottom: 20px;
 }
+
+/* =========================
+   SELECTOR DE PALETA 🎨
+========================= */
+.theme-selector {
+    position: relative;
+}
+
+.palette-btn {
+    background: #e98cae;
+    border: none;
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.palette-btn:hover {
+    transform: scale(1.05);
+}
+
+.palette {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 16px;
+    display: flex;
+    gap: 10px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+.hidden {
+    display: none;
+}
+
+.color-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-dot:hover {
+    border-color: #aaa;
+}
+
+/* COLORES */
+.color-dot.pink { background: #e98cae; }
+.color-dot.blue { background: #2c2cd1; }
+.color-dot.purple { background: #7b5cff; }
