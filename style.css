@@ -202,8 +202,9 @@ body {
 }
 
 .card.approved {
-    background: rgba(233, 140, 174, 0.25);
+    background: color-mix(in srgb, var(--main) 25%, white);
     border-color: var(--main);
+
 }
 
 .card:hover:not(.locked) {
