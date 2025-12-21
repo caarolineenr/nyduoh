@@ -178,7 +178,7 @@ body {
 
 .card {
     background: #fff;
-    border: 2px solid #f0d8e1;
+    border: 2px solid var(--border);
     border-radius: 6px;
 
     width: 200px;
