@@ -94,7 +94,7 @@ body {
 .progress-title {
     font-size: 11px;
     letter-spacing: 0.8px;
-    color: #c25572;
+    color: var(--main);
 }
 
 .progress-row {
@@ -107,7 +107,7 @@ body {
 .progress-bar {
     flex: 1;
     height: 8px;
-    background: #f2cddc;
+    background: var(--progress-bg);
     border-radius: 10px;
     overflow: hidden;
 }
@@ -128,7 +128,7 @@ body {
 #currentPercent {
     font-size: 16px;
     font-weight: 700;
-    color: #e98cae;
+    color: var(--main);
 }
 
 .total {
