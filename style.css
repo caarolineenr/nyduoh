@@ -202,7 +202,7 @@ body {
 }
 
 .card.approved {
-    background: color-mix(in srgb, var(--main) 18%, white);;
+    background: rgba(233, 140, 174, 0.25);
     border-color: var(--main);
 }
 
