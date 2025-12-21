@@ -1,6 +1,38 @@
 /* =========================
    GENERAL
 ========================= */
+/* =========================
+   VARIABLES DE COLOR 🎨
+========================= */
+:root {
+    --main: #e98cae;
+    --light: #fff2fb;
+    --border: #f0d8e1;
+    --progress-bg: #f2cddc;
+}
+
+/* TEMAS */
+body.theme-pink {
+    --main: #e98cae;
+    --light: #fff2fb;
+    --border: #f0d8e1;
+    --progress-bg: #f2cddc;
+}
+
+body.theme-blue {
+    --main: #2c2cd1;
+    --light: #f2f3ff;
+    --border: #c6c9ff;
+    --progress-bg: #d6d8ff;
+}
+
+body.theme-purple {
+    --main: #7b5cff;
+    --light: #f4f3ff;
+    --border: #d2cbff;
+    --progress-bg: #e0dbff;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco",
                  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
